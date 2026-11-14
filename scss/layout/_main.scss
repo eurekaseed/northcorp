@@ -173,10 +173,10 @@ main {
 .toppage .pickup {
   .entry_date,
   .entry_title {
-    font-size: 1rem;
+    font-size: var(--fs-base);
 
     @include g.mq() {
-      font-size: max(1.4vw, 1.2rem);
+      font-size: var(--fs-md);
       padding: 0.5rem;
     }
   }
@@ -186,18 +186,18 @@ main {
 // 記事タイトルと日付 p-lineup-pickup
 .p-lineup-pickup {
   a.entry_title {
-    font-size: max(1.5vw, 1.1rem);
+    font-size: var(--fs-md);
     font-weight: bold;
 
     @include g.mq(lg) {
-      font-size: 1.2rem;
+      font-size: var(--fs-md);
     }
 
     .entry_date {
-      font-size: max(1.2vw, 0.9rem);
+      font-size: var(--fs-sm);
 
       @media screen and (min-width: 1200px) {
-        font-size: 1rem;
+        font-size: var(--fs-base);
       }
     }
   }

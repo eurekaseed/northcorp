@@ -5,21 +5,12 @@ page > common
 ------------------------------
 */
 
-/*!
-フォントサイズ
-*/
-$baseFontSize: 16;
-
-@function rem($pixels) {
-  @return calc($pixels / $baseFontSize * 1rem);
-}
-
 .lead {
   font-weight: bold;
-  font-size: 1.25rem;
+  font-size: var(--fs-md);
 
   @include g.mq_max(md) {
-    font-size: 1.1rem;
+    font-size: var(--fs-md);
   }
 }
 

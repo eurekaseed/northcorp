@@ -5,12 +5,31 @@ foundation > base
 ------------------------------
 */
 body {
-    line-height: 1.8;
-    font-size: 16px;
+    line-height: var(--lh-base);
+    font-size: var(--fs-base);
     color: var(--color-font-base);
     font-family: var(--font-family-base);
+}
 
-    @include g.mq() {
-        font-size: 16px;
+/* 和文見出しの約物の空きを詰める */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-feature-settings: "palt"1;
+}
+
+/* 動きを減らす設定を尊重する */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
 }

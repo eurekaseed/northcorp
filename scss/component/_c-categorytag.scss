@@ -5,15 +5,6 @@ component > categorytag
 ------------------------------
 */
 
-/*!
-フォントサイズ
-*/
-$baseFontSize: 16;
-
-@function rem($pixels) {
-  @return calc($pixels / $baseFontSize * 1rem);
-}
-
 /*! カテゴリタグ */
 
 %categoryTagBase {
@@ -28,7 +19,7 @@ $baseFontSize: 16;
 .c-categoryTag {
   @extend %categoryTagBase;
   padding: 0.2rem 1.8vw;
-  font-size: max(1.4vw, 1rem);
+  font-size: var(--fs-base);
 }
 
 // ニュース一覧内のタグ
@@ -38,7 +29,7 @@ $baseFontSize: 16;
   @include g.mq_max(md) {
     padding: 0.3rem 1rem;
   }
-  font-size: 1rem;
+  font-size: var(--fs-base);
   width: 10rem;
   text-align: center;
 
@@ -53,13 +44,13 @@ $baseFontSize: 16;
   @extend %categoryTagBase;
   @include g.mq() {
     padding: 0.2rem 1.8vw;
-    font-size: max(1.4vw, 1rem);
+    font-size: var(--fs-base);
   }
 
   @include g.mq_max() {
     font-weight: bold;
     letter-spacing: 0.08em;
-    font-size: 1rem;
+    font-size: var(--fs-base);
     padding: 0.2rem 1rem;
     background-color: #dfe7ed;
     color: var(--color-bg-button);

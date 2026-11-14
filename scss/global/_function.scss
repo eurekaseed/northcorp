@@ -1,0 +1,11 @@
+// global > function
+// ------------------------------
+
+// 基準フォントサイズ。html の font-size と揃えておく
+$baseFontSize: 16;
+
+// px値をremに変換する
+// ex) g.rem(24) => 1.5rem
+@function rem($pixels) {
+  @return calc($pixels / $baseFontSize * 1rem);
+}

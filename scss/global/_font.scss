@@ -4,6 +4,29 @@ global > font
 */
 
 :root {
+  /* 書体。和文と欧文を分けて指定する */
   --font-family-base: "Noto Sans JP", sans-serif;
   --font-family-english: "Lato", sans-serif;
+
+  /* 文字サイズ。html の 16px を 1rem とした7段 */
+  --fs-note: 0.8rem; /* 12.8px 注記・補足 */
+  --fs-sm: 0.9rem; /* 14.4px 日付・コピーライト */
+  --fs-base: 1rem; /* 16px   本文。スマホでも縮めない */
+  --fs-md: 1.25rem; /* 20px   リード文・小見出し */
+  --fs-lg: 1.6rem; /* 25.6px 中見出し */
+  --fs-xl: 2rem; /* 32px   セクション見出し */
+  --fs-2xl: 3rem; /* 48px   ページタイトル */
+
+  /* 画面幅で伸縮する文字サイズ。下限はスマホでの読みやすさを優先して決める */
+  --fs-fluid-lead: clamp(1.1rem, 2.6vw, 1.25rem); /* 17.6px → 20px */
+  --fs-fluid-md: clamp(1.25rem, 3.2vw, 1.6rem); /* 20px → 25.6px */
+  --fs-fluid-section-title: clamp(1.25rem, 3.7vw, 2rem); /* 20px → 32px */
+  --fs-fluid-page-title: clamp(1.6rem, 5.6vw, 3rem); /* 25.6px → 48px */
+
+  /* 行間 */
+  --lh-base: 1.8;
+  --lh-tight: 1.5;
+
+  /* 和文の行長の上限。全角45字 */
+  --measure: 45em;
 }

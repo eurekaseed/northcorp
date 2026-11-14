@@ -14,7 +14,7 @@ page > product
   }
 
   li {
-    font-size: 1.2rem;
+    font-size: var(--fs-md);
     font-weight: bold;
     line-height: 200%;
     color: var(--color-key);

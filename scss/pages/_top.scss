@@ -88,7 +88,7 @@ page > top
       @include g.mq() {
         width: clamp(6rem, 18%, 290px);
         height: auto;
-        font-size: max(2.4vw, 1.2rem);
+        font-size: var(--fs-md);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -97,7 +97,7 @@ page > top
       }
 
       @include g.mq_max() {
-        font-size: 1rem;
+        font-size: var(--fs-base);
         padding: 0.5rem 1rem;
         letter-spacing: 0.2em;
         width: 8rem;
@@ -214,29 +214,8 @@ page > top
   }
 }
 
-/*!
-フォントサイズ
-*/
-$baseFontSize: 16;
-
-@function rem($pixels) {
-  @return calc($pixels / $baseFontSize * 1rem);
-}
-
 .top_KV .pagetitle {
-  font-size: max(6vw, 1.4rem);
+  font-size: var(--fs-fluid-page-title);
   font-weight: bold;
-
-  @include g.mq() {
-    font-size: 3.6vw;
-  }
 }
 
-.test {
-  font-size: rem(100); //rem100
-  font-size: rem(5); //rem5
-  font-size: rem(20);
-  /*! 20 */
-  margin-right: rem(47);
-  /*! 47 */
-}
