@@ -5,14 +5,6 @@ project > p-pict-section
 ------------------------------
 */
 
-/*
-フォントサイズ計算 */
-$baseFontSize: 16;
-
-@function rem($pixels) {
-  @return calc($pixels / $baseFontSize * 1rem);
-}
-
 /*!
 トップページ 左写真付きコンテンツ */
 

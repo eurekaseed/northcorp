@@ -5,14 +5,6 @@ project > p-news-entry
 ------------------------------
 */
 
-/*
-フォントサイズ計算 */
-$baseFontSize: 16;
-
-@function rem($pixels) {
-  @return calc($pixels / $baseFontSize * 1rem);
-}
-
 .entry_date,
 .entry_title {
   font-weight: bold;
@@ -21,10 +13,10 @@ $baseFontSize: 16;
 .n-date,
 .entry_date,
 .entry_title {
-  font-size: 1rem;
+  font-size: var(--fs-base);
   line-height: 2;
   @include g.mq() {
-    font-size: 1.2rem;
+    font-size: var(--fs-md);
   }
 }
 

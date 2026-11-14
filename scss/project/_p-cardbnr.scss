@@ -5,14 +5,6 @@ project > p-cardbnr
 ------------------------------
 */
 
-/*
-フォントサイズ計算 */
-$baseFontSize: 16;
-
-@function rem($pixels) {
-  @return calc($pixels / $baseFontSize * 1rem);
-}
-
 /*!
 トップページ 製品ラインナップバナー */
 
@@ -136,7 +128,7 @@ productページの幅広ピックアップコーナーレイアウト */
       align-self: start;
       justify-self: start;
       display: inline-block;
-      font-size: clamp(1rem, 1.5vw, 1.5rem);
+      font-size: var(--fs-fluid-md);
       font-weight: bold;
       letter-spacing: 0.08em;
       padding: 1vw;
@@ -246,5 +238,12 @@ productページの幅広ピックアップコーナーレイアウト */
       align-self: flex-end;
       justify-self: end;
     }
+  }
+}
+
+.product .p-lineup-pickup .boxTop img {
+  @include g.mq(md) {
+    object-fit: cover;
+    height: 100%;
   }
 }

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="株式会社ノースは現実には存在しない会社です。会社についての文章はAIが書いており、このサイトはデザインサンプルの為に作られたサイトです。実在はしません。">
   <title>未来をみつめる会社です。株式会社ノース</title>
 
@@ -18,7 +18,7 @@
   <!-- googlefonts -->
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Noto+Serif+JP:wght@600;700&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Noto+Sans+JP:wght@400;700&display=swap"
     rel="stylesheet">
 
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -67,7 +67,13 @@
               </ul>
             </li>
             <li><a href="/ourproducts/">製品への自信</a></li>
-            <li><a href="/news/">ニュース</a></li>
+            <li><a href="/news/">ニュース</a>
+              <ul>
+                <li><a href="/news/product/">製品 PICK UP</a></li>
+                <li><a href="/news/recruit/">採用情報</a></li>
+                <li><a href="/news/event/">イベント</a></li>
+              </ul>
+            </li>
             <li><a href="/company/">会社情報</a>
               <ul>
                 <li><a href="/company/#overview">会社概要</a></li>
@@ -84,7 +90,7 @@
               山形県南陽市000-00</span>
             <span class="telNo">
               TEL：072-479-5937 </span>
-            <a class="contact__address">
+            <a href="/contact/" class="contact__address">
               <span>お気軽にお問い合わせください</span></a>
           </address>
         </div>
@@ -100,7 +106,7 @@
     <div class="black_bg" id="js-black-bg"></div>
   </header>
   <!-- Header End -->
-  <main class="siteWidth">
+  <main id="pagetop" class="siteWidth">
     <div class="p-keyvisual">
       <div class="kvimg"><img src="/img/top/top-kv.png" alt=""></div>
       <h1 class="pagetitle">未来をみつめる会社です</h1>
@@ -133,7 +139,7 @@
     <section class="lineup p-center-section">
       <h1 class="title-level2">製品情報</h1>
       <div class="l-container centeringBox">
-        <p class="min-gap u-txtL">
+        <p class="min-gap txt_left measure">
           株式会社ノースでは、ワイヤー製品、柱・壁保護材、金属建材、ケーブル製品などを扱っています。豊富な製品を取り揃えており、高い品質と安全性を確保するために、品質管理体制も整っています。さらに、最新のテクノロジーを活用して開発した製品も多数取り揃えています。そのため、お客様のニーズに合わせて最適な製品を提供しています。
         </p>
         <div class="wrapper">
@@ -204,7 +210,7 @@
             <a class="entry_title c-arrow-txtlink" href="/news/entry.html">中途採用の募集がはじまりました。</a>
           </li>
 
-          <li><span class=" n-date">2023.03.01</span>
+          <li><span class="n-date">2023.03.01</span>
             <a class="c-cateTag__news" href="/news/product/">製品 PICK UP</a>
             <a class="entry_title c-arrow-txtlink" href="/news/entry.html">熱に強い新商品・XXXXXXXXXが発売されました。</a>
 
@@ -311,7 +317,7 @@
           <span class="telNo">
             TEL：<strong><a href="tel:000-1234-5678">000-1234-5678</a></strong></span>
           <span class="notes">受付時間：平日9:00〜17:00/日・祝日を除く </span>
-          <a class="c-btn__footerContact">メールでの<br class="nowrapBr">お問い合わせ</a>
+          <a href="/contact/" class="c-btn__footerContact">メールでの<br class="nowrapBr">お問い合わせ</a>
         </address>
       </div>
     </div>
@@ -319,7 +325,6 @@
       <ul>
         <li><a href="/use/">サイトのご利用について</a></li>
         <li><a href="/privacypolicy/">プライバシーポリシー</a></li>
-        <li><a href="/securitypolicy/">情報セキュリティーポリシー</a></li>
       </ul>
       <p>©NORTH Communications., LTD.</p>
     </div>

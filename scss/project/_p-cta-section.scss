@@ -5,14 +5,6 @@ project > p-CTA-section
 ------------------------------
 */
 
-/*
-フォントサイズ計算 */
-$baseFontSize: 16;
-
-@function rem($pixels) {
-  @return calc($pixels / $baseFontSize * 1rem);
-}
-
 /*!
 お問い合わせセクション */
 .p-CTA-section {
@@ -32,7 +24,7 @@ $baseFontSize: 16;
       width: 55%;
 
       .text {
-        font-size: clamp(1.1rem, 1.5vw, 1.5rem);
+        font-size: var(--fs-fluid-md);
         letter-spacing: 0.08em;
       }
     }

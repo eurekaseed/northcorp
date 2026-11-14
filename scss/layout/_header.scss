@@ -12,11 +12,6 @@ layout > header
 */
 
 // フォントサイズ計算
-$baseFontSize: 16;
-
-@function rem($pixels) {
-  @return calc($pixels / $baseFontSize * 1rem);
-}
 
 .header {
   position: fixed;
@@ -275,7 +270,7 @@ ul.headerNavi li:hover > ul > li {
 
   // サブメニュードロップダウン：ホバー直下のサブメニュー高さ戻す
   ul.headerNavi li:hover > ul > li {
-    height: rem(42);
+    height: g.rem(42);
     height: 3rem;
     overflow: visible;
   }
@@ -314,7 +309,7 @@ SPnavi
   .SPnavi_border,
   .menutxt {
     transition: all 0.4s;
-    font-size: rem(11);
+    font-size: var(--fs-note);
   }
 
   .SPnavi_border {
@@ -449,11 +444,11 @@ SPnavi
       }
 
       .company-name {
-        font-size: rem(26);
+        font-size: var(--fs-lg);
       }
 
       .address {
-        font-size: rem(20);
+        font-size: var(--fs-md);
       }
 
       .contact__address {
@@ -461,7 +456,7 @@ SPnavi
         text-align: center;
         border-top: solid 2px #fff;
         border-bottom: solid 2px #fff;
-        font-size: rem(15);
+        font-size: var(--fs-base);
         font-weight: bold;
         margin: 3rem 10px;
         padding: 1.5rem;
@@ -498,26 +493,22 @@ SPnavi
   }
 }
 
-/*!
-フォントサイズ
-*/
-
 ul.headerNavi li {
-  font-size: 1.2rem;
+  font-size: var(--fs-md);
   letter-spacing: 0.1em;
 
   li {
-    font-size: 1rem;
+    font-size: var(--fs-base);
   }
 }
 
 @media screen and (min-width: 1000px) {
   ul.headerNavi li {
-    font-size: clamp(1rem, 1.8vw, 1.3rem);
+    font-size: var(--fs-fluid-lead);
     letter-spacing: 0.1em;
 
     li {
-      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-size: var(--fs-fluid-lead);
     }
   }
 }
